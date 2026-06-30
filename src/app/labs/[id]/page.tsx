@@ -35,7 +35,6 @@ export default function LabDetail() {
     e.preventDefault();
     const res = await fetch(`/api/labs/${params.id}/submit`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ flag }),
       headers: { "Content-Type": "application/json", "Authorization": "Bearer " + localStorage.getItem("token") }
     });
